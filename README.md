@@ -52,3 +52,10 @@ add repository to project
 - git init
 - git remote add origin git@github.com:minhtiepaa1/header_antd_custom_ui.git // add link repo
 - git remote -v // check
+
+* fix: There isn’t anything to compare.
+  main and master are entirely different commit histories.
+  git checkout master  
+   git branch main master -f  
+   git checkout main  
+   git push origin main -f
