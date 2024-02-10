@@ -37,7 +37,7 @@ export const mainLayoutsStyles = {
 
   boxLayoutContent: css`
     position: fixed;
-    top: 46px;
+    top: 52px;
     height: 100vh;
     width: 100%;
     overflow: hidden;
@@ -59,5 +59,14 @@ export const mainLayoutsStyles = {
     justify-content: center;
     bottom: 0;
     height: 0;
+  `,
+
+  topMenuBox: css`
+    position: fixed;
+    width: 100%;
+    background-color: #f7fafd;
+    max-height: 52px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.03),
+      0 1px 6px -1px rgba(0, 0, 0, 0.02), 0 2px 4px 0 rgba(0, 0, 0, 0.02);
   `,
 };
