@@ -22,8 +22,9 @@ export const mainLayoutsStyles = {
 
   contentBody: css`
     height: 100vh;
-    overflow-y: hidden;
-    padding-bottom: 20px;
+    overflow-y: auto;
+    padding: 20px;
+    background-color: green;
   `,
 
   contentBackImage: css`
@@ -64,7 +65,7 @@ export const mainLayoutsStyles = {
   topMenuBox: css`
     position: fixed;
     width: 100%;
-    background-color: #f7fafd;
+    background-color: #b0e76f;
     max-height: 52px;
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.03),
       0 1px 6px -1px rgba(0, 0, 0, 0.02), 0 2px 4px 0 rgba(0, 0, 0, 0.02);

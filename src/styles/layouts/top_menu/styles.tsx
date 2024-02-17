@@ -16,4 +16,18 @@ export const topMenuStyles = {
   `,
 
   boxRight: css``,
+
+  popoverStyle: css`
+    padding: 5px 10px;
+    border-radius: 5px;
+    &:hover {
+      background-color: #e083d1;
+    }
+  `,
+
+  popoverBox: css`
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 20px;
+  `,
 };

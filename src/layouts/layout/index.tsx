@@ -33,7 +33,6 @@ const MainLayout: React.FC<DataProps> = (props) => {
   return (
     <div
       className={css`
-        overflow-y: "auto";
         height: 100vh;
       `}
     >
