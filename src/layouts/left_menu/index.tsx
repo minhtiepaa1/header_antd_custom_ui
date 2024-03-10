@@ -12,19 +12,25 @@ const LeftMenu: React.FC<DataProps> = (props) => {
     <Menu
       theme="light"
       mode="inline"
-      items={props?.leftMenuItems?.map((item) => {
+      items={props?.leftMenuItems?.map((item, index) => {
         let temp = item;
 
         if (item?.children === undefined || item?.children?.length === 0) {
-          temp.label = <Link to={item.path}> {item.label}</Link>;
+          temp.label = (
+            <Link to={item?.path} key={index}>
+              {item?.label}
+            </Link>
+          );
 
           return item;
         } else {
-          temp?.children?.map((itemChild) => {
+          temp?.children?.map((itemChild, index) => {
             let tempChild = itemChild;
 
             tempChild.label = (
-              <Link to={itemChild.path}> {itemChild.label}</Link>
+              <Link to={itemChild?.path} key={index}>
+                {itemChild?.label}
+              </Link>
             );
             return itemChild;
           });
