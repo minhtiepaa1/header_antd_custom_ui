@@ -3,7 +3,13 @@ import React from "react";
 
 export const mainLayoutsStyles = {
   container: css`
-    padding: 0px;
+    height: 100vh;
+    overflow: auto;
+  `,
+
+  container2: css`
+    margin-top: 10px;
+    overflow: auto;
   `,
 
   siderLayout: css`
@@ -13,18 +19,13 @@ export const mainLayoutsStyles = {
       background: #f5f5f5 !important;
     }
     overflow: auto;
-    height: 100vh;
-    width: 100%;
-    top: 0;
-    left: 0;
-    bottom: 0;
+    position: sticky;
+    top: 0px;
   `,
 
-  contentBody: css`
-    height: 100vh;
-    overflow-y: auto;
+  contentSpace: css`
+    overflow: hidden;
     padding: 20px;
-    background-color: green;
   `,
 
   contentBackImage: css`
@@ -50,9 +51,11 @@ export const mainLayoutsStyles = {
     overflow: hidden;
   `,
 
-  contentFC: css``,
+  content: css`
+    overflow: auto;
+  `,
 
-  footerFC: css`
+  footer: css`
     position: absolute;
     display: flex;
     flex-wrap: wrap;
@@ -62,9 +65,10 @@ export const mainLayoutsStyles = {
     height: 0;
   `,
 
-  topMenuBox: css`
-    position: fixed;
-    width: 100%;
+  topMenuSpace: css`
+    position: sticky;
+    top: 10px;
+
     background-color: #b0e76f;
     max-height: 52px;
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.03),

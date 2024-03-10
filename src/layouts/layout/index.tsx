@@ -31,60 +31,56 @@ const MainLayout: React.FC<DataProps> = (props) => {
   } = theme.useToken();
 
   return (
-    <div
-      className={css`
-        height: 100vh;
-      `}
-    >
-      <div className={styles.topMenuBox}>
-        {/* <Menu
-          theme="light"
-          mode="horizontal"
-          defaultSelectedKeys={["2"]}
-          items={items1}
-        ></Menu> */}
+    <AntLayout className={styles.container}>
+      {/* <div> */}
+      <div className={styles.topMenuSpace}>
         <TopMenu
           isOpenLeftmenu={isOpenLeftMenu}
           setIsOpenLeftmenu={setIsOpenLeftMenu}
         />
       </div>
-      <div className={styles.boxLayoutContent}>
-        <AntLayout style={{}}>
+      {/* <div className={styles.boxLayoutContent}> */}
+      <AntLayout className={styles.container2}>
+        <div className={styles.siderLayout}>
           {isOpenLeftMenu && (
             <Sider
               theme="light"
               collapsible
               collapsed={collapsed}
               onCollapse={(value) => setCollapsed(value)}
-              className={styles.siderLayout}
+              // className={styles.siderLayout}
             >
               <LeftMenu leftMenuItems={props?.leftMenuItems} />
             </Sider>
           )}
+        </div>
 
-          {/* <AntLayout className={styles.antLayoutContainContent}> */}
-          <Content className={styles.contentFC}>
-            <div
-              className={styles.contentBody}
-              style={{
-                background: colorBgContainer,
-              }}
-            >
-              <Routes
-                leftMenuItems={props?.leftMenuItems}
-                basePath={props?.basePath}
-              />
-              {/* <Footer
+        <AntLayout className={styles.antLayoutContainContent}>
+          <div>
+            <Content className={styles.content}>
+              <div
+                className={styles.contentSpace}
+                style={{
+                  background: colorBgContainer,
+                }}
+              >
+                <Routes
+                  leftMenuItems={props?.leftMenuItems}
+                  basePath={props?.basePath}
+                />
+                {/* <Footer
                   className={`${styles.contentBackImage}, ${styles.footerFC}`}
                 >
                   Future social ©2023 Created by tiep.quang
                 </Footer> */}
-            </div>
-          </Content>
-          {/* </AntLayout> */}
+              </div>
+            </Content>
+          </div>
         </AntLayout>
-      </div>
-    </div>
+      </AntLayout>
+      {/* </div> */}
+      {/* </div> */}
+    </AntLayout>
   );
 };
 

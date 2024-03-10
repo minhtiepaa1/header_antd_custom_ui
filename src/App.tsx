@@ -46,7 +46,7 @@ const Layout: React.FC<DataProps> = (props) => {
         <Route path="/register" element={"Register"} />
         <Route path="/logout" element={"Logout"} />
       </Routes>
-      <Button onClick={() => checkIsLogin()}> click</Button>
+      {/* <Button onClick={() => checkIsLogin()}> click</Button> */}
     </BrowserRouter>
   );
 };
